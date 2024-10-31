@@ -8,26 +8,48 @@
                 <img alt="platform" src="/images/logo.svg" height="40" className="logo__image" />
             </a>
 
-            @if (isAuthenticated) {
+            @if (isAuthenticated)
+            {
                 <div class="header__controrls controls">
+                    <div class="controls__search search">
+                        <input type="search" id="headerSearch" class="search__input">
+                        <label for="headerSearch" class="search__lable control">
+                            <img src="/images/icons/search.svg" alt="search">
+                        </label>
+                    </div>
                     <ul class="controls__list">
                         <li class="controls__item">
-                            <a href="" class=""></a>
+                            <a href="#" class="control">
+                                <img src="/images/icons/notification.svg" alt="notifications">
+                            </a>
+                        </li>
+                        <li class="controls__item">
+                            <a href="#" class="control">
+                                <img src="/images/icons/chat.svg" alt="chat">
+                            </a>
+                        </li>
+                        <li class="controls__item">
+                            <a href="#" class="control">
+                                <img src="/images/icons/ratings.svg" alt="ratings">
+                            </a>
                         </li>
                     </ul>
                     <div class="controls__user-info user">
                         <div class="user__text-data">
                             <span class="user__name">@userName</span>
-                            @if (!string.IsNullOrEmpty(userTeam)) {
+                            @if (!string.IsNullOrEmpty(userTeam))
+                            {
                                 <span class="user__team">@userTeam</span>
                             }
                         </div>
                         <div class="user__image-data">
                             <div class="user__team-image">
-                                <img src="@(!string.IsNullOrEmpty(userTeamImg) ? userTeamImg : "/images/no-team.png")" alt="User team" />
+                                <img src="@(!string.IsNullOrEmpty(userTeamImg) ? userTeamImg : "/images/no-team.png")"
+                                    alt="User team" />
                             </div>
                             <button type="button" class="user__avatar">
-                                <img src="@(!string.IsNullOrEmpty(userAvatar) ? userAvatar : "/images/no-avatar.png")" alt="User avatar" />
+                                <img src="@(!string.IsNullOrEmpty(userAvatar) ? userAvatar : "/images/no-avatar.png")"
+                                    alt="User avatar" />
                             </button>
                         </div>
                     </div>
@@ -42,7 +64,7 @@
     private string userName = "Sebastian Królikowski";
     private string userTeam = "Black Gorillas Team";
     @* private string userTeamImg = "/images/test/user-team.jpg";
-    private string userAvatar = "/images/test/user-avatar.jpg"; *@
+private string userAvatar = "/images/test/user-avatar.jpg"; *@
     private string userTeamImg = "";
     private string userAvatar = "";
 }
