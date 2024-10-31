@@ -1,0 +1,48 @@
+﻿@inherits LayoutComponentBase
+
+
+<header class="header">
+    <div class="container">
+        <nav class="header__navigation">
+            <a class="header__logo logo" href="#">
+                <img alt="platform" src="/images/logo.svg" height="40" className="logo__image" />
+            </a>
+
+            @if (isAuthenticated) {
+                <div class="header__controrls controls">
+                    <ul class="controls__list">
+                        <li class="controls__item">
+                            <a href="" class=""></a>
+                        </li>
+                    </ul>
+                    <div class="controls__user-info user">
+                        <div class="user__text-data">
+                            <span class="user__name">@userName</span>
+                            @if (!string.IsNullOrEmpty(userTeam)) {
+                                <span class="user__team">@userTeam</span>
+                            }
+                        </div>
+                        <div class="user__image-data">
+                            <div class="user__team-image">
+                                <img src="@(!string.IsNullOrEmpty(userTeamImg) ? userTeamImg : "/images/no-team.png")" alt="User team" />
+                            </div>
+                            <button type="button" class="user__avatar">
+                                <img src="@(!string.IsNullOrEmpty(userAvatar) ? userAvatar : "/images/no-avatar.png")" alt="User avatar" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            }
+        </nav>
+    </div>
+</header>
+
+@code {
+    private bool isAuthenticated = true;
+    private string userName = "Sebastian Królikowski";
+    private string userTeam = "Black Gorillas Team";
+    @* private string userTeamImg = "/images/test/user-team.jpg";
+    private string userAvatar = "/images/test/user-avatar.jpg"; *@
+    private string userTeamImg = "";
+    private string userAvatar = "";
+}
