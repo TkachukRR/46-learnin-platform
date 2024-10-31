@@ -21,6 +21,32 @@
     align-items: center;
 }
 
+.controls__search {
+    display: flex;
+    align-items: center;
+}
+
+.controls__list {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 0 25px;
+}
+
+.search__input {
+    width: 0;
+    opacity: 0;
+}
+
+.search:focus-within .search__input {
+    width: auto;
+    opacity: 1;
+}
+
+.search__lable {
+    cursor: pointer;
+}
+
 .user {
     display: flex;
     align-items: center;
