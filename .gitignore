@@ -1,0 +1,18 @@
+# Build
+*/bin/
+*/obj/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.sln
+
+# VS Code specific files
+.vscode/
+.history/
+
+# Logs
+*.log
