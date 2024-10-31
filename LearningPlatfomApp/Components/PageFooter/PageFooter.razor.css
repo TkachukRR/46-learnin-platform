@@ -1,0 +1,21 @@
+.footer {
+    font-size: 12px;
+    font-weight: 500;
+    color: #848998;
+    background-color: #E5E8EF;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.footer__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer__copyright {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
