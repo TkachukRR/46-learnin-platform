@@ -1,6 +1,7 @@
 # Build
 */bin/
 */obj/
+*/dist/
 
 # User-specific files
 *.rsuser
