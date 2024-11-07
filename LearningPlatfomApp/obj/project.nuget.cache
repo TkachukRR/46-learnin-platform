@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gcb9OUJua7I=",
+  "dgSpecHash": "Tsdhawc03EM=",
   "success": true,
   "projectFilePath": "/Users/romantkachuk/Documents/_projects/72-blazor/LearningPlatfomApp/LearningPlatfomApp.csproj",
-  "expectedPackageFiles": [
-    "/Users/romantkachuk/.nuget/packages/microsoft.netcore.app.ref/6.0.35/microsoft.netcore.app.ref.6.0.35.nupkg.sha512",
-    "/Users/romantkachuk/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.35/microsoft.aspnetcore.app.ref.6.0.35.nupkg.sha512",
-    "/Users/romantkachuk/.nuget/packages/microsoft.netcore.app.host.osx-arm64/6.0.35/microsoft.netcore.app.host.osx-arm64.6.0.35.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }
