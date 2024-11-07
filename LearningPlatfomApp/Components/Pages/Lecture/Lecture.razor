@@ -1,0 +1,75 @@
+@page "/lecture"
+
+<PageTitle>Lecture</PageTitle>
+
+<div class="container">
+    <div class="content">
+        <div class="title">
+            <h1 class="title__text">@pageTitle</h1>
+            <p class="title__description">@pageTitleDescription</p>
+        </div>
+        
+        <section class="section">
+            <h2 class="section__title">@sectionTitle</h2>
+
+            @foreach (var article in articles)
+            {
+                <article class="section__article article">
+                    <h2 class="article__title">@article.Title</h2>
+
+                    @if (!string.IsNullOrEmpty(article.ImageSrc))
+                    {
+                        <div class="article__image-wrapper">
+                            <img src="@article.ImageSrc" alt="Article Image" class="article__image">
+                        </div>
+                    }
+                    @foreach (var paragraph in article.Paragraphs)
+                    {
+                        <p class="article__text">@paragraph</p>
+                    }
+                </article>
+            }
+        </section>    
+    </div>
+</div>
+
+
+@code {
+    private string pageTitle = "Etap 1. Research";
+    private string pageTitleDescription = "A. Wprowadzenie do zawodu";
+
+    private string sectionTitle = "Jak to robi Apple?";
+
+    private List<Article> articles = new List<Article>
+    {
+        new Article
+        {
+            Title = "Apple Human Interface Guidelines",
+            ImageSrc = "/images/test/lecture-article-1.jpg",
+            Paragraphs = new List<string>
+            {
+                "We are on the same page. Widzisz, właśnie dlatego to było tak ważne. Teraz wszyscy mamy równy start i spójną definicję pojęć UX i UI, dlatego z czystym sumieniem możemy przejść do wprowadzenia w proces projektowy UX-a.",
+                "We wstępie przedstawiłem Ci moje spojrzenie na mechanizmy przyswajania wiedzy. Odwołuję się tutaj do szczególnie ważnej praktyki, a także do doświadczania. Właśnie ze względu na to nie czeka Cię kolejny monotonny wywód na temat postępowania, które zakłada przechodzenie punkt po punkcie do następnych działań i następnych, i następnych. Postaram się zmieniać Twoją percepcję, przerzucać Cię do wzorców, pokazywać ćwiczenia. Nie chodzi o to, aby przeczytać tę książkę jednym tchem od deski do deski – o ile coś takiego w tym przypadku jest możliwe – lecz o to, żeby doświadczyć wiedzy, zrozumieć cały proces i przećwiczyć go, wrócić jeszcze raz i potrenować na innym przykładzie. Nie bój się cofać, nie bój się powtarzać, kreślić po Workshop Booku i wyrywać z niego stron. Działaj i praktykuj. Nie obawiaj się, że coś nie wyjdzie od razu, wręcz przeciwnie – z każdego działania możesz czerpać. Jeśli zauważysz, że coś poszło nie tak, następnym razem będziesz wiedział, jak tego uniknąć. Zrobienie czegoś źle również jest nauką – najważniejsze, aby zdać sobie z tego sprawę, nie bać się pracy. W kontekście zdobywania wiedzy i umiejętności tylko brak działania jest gorszy od niewłaściwego działania.",
+                "Opracowanie pewnego planu postępowania jest jednak ważne, dlatego opowiem Ci w skrócie, jak będzie wyglądał nasz proces projektowy. Zaczniemy od rzeczy najważniejszej, czyli persony. Zdefiniowanie dobrej persony to podstawa, gdyż ukierunkuje ona zespół do pracy na założeniach i wyłącznie na twardych danych."
+            }
+        },
+        new Article
+        {
+            Title = "Proste? Oczywiście że nie, przynajmniej jeszcze nie.",
+            ImageSrc = "/images/test/lecture-article-2.jpg",
+            Paragraphs = new List<string>
+            {
+                "Oczywiście w zależności od projektu, budżetu, czasu i zespołu możemy wchodzić bardzo głęboko w sferę scenariuszy i flow, pamiętajmy jednak, aby robić to w sposób racjonalny, gdyż z perspektywy osiągnięcia dobrego efektu nie są to czynności obowiązkowe. Optymalizacja, którą proponuję, wynika z mojej praktyki. Z oczekiwanej bardzo dużej ilości pracy i krótkiego czasu na jej wykonanie. W związku z tym musiałem opracować proces zoptymalizowany, który umożliwia realizację celu przy zachowaniu wysokiej jakości wykonania. Oczywiście na pewno znajdą się specjaliści, którym z takim myśleniem będzie nie po drodze – mają do tego prawo, tak samo jak ja mam prawo twierdzić, że mój zoptymalizowany proces będzie się sprawdzał dobrze, a efekt mojej pracy w niczym nie będzie ustępował innym praktykom.",
+                "Optymalizacja daje dużą przewagę nad tradycyjnym procesem – to oczywiście oszczędność czasu realizacji, krótki czas realizacji pociąga zaś za sobą wcześniejszą walidację, szybsze wprowadzenie zmian i większe oszczędności finansowe dla firmy. Rozpatrzenie zoptymalizowanego procesu pod względem szybkości realizacji pozwala stwierdzić, że ma on pewną przewagę nad tradycyjnym, rozbudowanym podejściem składającym się z mnóstwa różnych etapów, narzędzi i wymagającym analizy raportów, które przygotowuje się w trakcie całego procesu, Optymalizacja daje dużą przewagę nad tradycyjnym procesem – to oczywiście oszczędność czasu realizacji, krótki czas realizacji pociąga zaś za sobą wcześniejszą walidację, szybsze wprowadzenie zmian i większe oszczędności finansowe dla firmy. Rozpatrzenie zoptymalizowanego procesu pod względem szybkości realizacji pozwala stwierdzić, że ma on pewną przewagę nie tylko na koniec. Zwieńczeniem naszych ćwiczeń będzie etap prototypowania i walidacji, czyli przeprowadzania badań. Poznasz wówczas ich rodzaje oraz zdobędziesz wiedzę na temat identyfikacji błędów i propozycji rozwiązań. Cały proces możemy zakończyć raportem, poprawionym prototypem albo przygotowaniem pełnej specyfikacji dla UI Designera oraz developmentu.",
+                "Wszystko zależy od roli, jaką odgrywasz w zespole, Twoich predyspozycji, zasobów wiedzy i wreszcie specyfiki produktu lub wymagań klienta, czyli zleceniodawcy."
+            }
+        }
+    };
+
+    public class Article
+    {
+        public string Title { get; set; }
+        public string ImageSrc { get; set; }
+        public List<string> Paragraphs { get; set; }
+    }
+}
