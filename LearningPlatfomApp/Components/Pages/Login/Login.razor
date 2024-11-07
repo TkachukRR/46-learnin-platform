@@ -1,0 +1,30 @@
+@page "/login"
+
+<PageTitle>Login</PageTitle>
+
+<div class="container flex-grow-1 d-flex justify-content-center align-items-center">
+
+    <div class="login-form">
+        <h2 class="login-form__title">Zaloguj się</h2>
+        <p class="login-form__helper">Problem? Sprawdź 
+            <a target="_blank" href="#">Pomoc</a> @* TODO add link *@
+        </p>
+        <form class="">
+            <div>
+                <label class="login-form__label">E-mail</label>
+                <input name="login" type="email" class="login-form__control" autocomplete="email">
+            </div>
+            <div>
+                <label class="login-form__label">Hasło</label>
+                <input name="password" type="password" class="login-form__control" autocomplete="current-password">
+            </div>
+            <p class="login-form__recovery">
+                <a href="#">Nie pamiętam hasła</a>  @* TODO add link *@
+            </p>
+            <div class="login-form__buttons">
+                <button type="submit" class="login-form__submit">Zaloguj się</button>
+            </div>
+        </form>
+    </div>
+
+</div>

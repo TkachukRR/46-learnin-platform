@@ -1,0 +1,94 @@
+.login-form {
+    width: 100%;
+    max-width: 480px;
+    padding: 50px;
+    border-radius: 10px;
+
+    background-color: #ffffff;
+    color: #181C32;
+
+    .login-form__title {
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 35px;
+        letter-spacing: -0.02em;
+        text-align: center;
+        margin-bottom: 7px;
+    }
+    
+    .login-form__helper {
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 15px;
+        text-align: center;
+        color: #848998;
+        margin-bottom: 38px;
+    
+        a {
+            color: #1F5BDF;
+        }
+    }
+    
+    .login-form__label {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 25px;
+        text-align: left;
+        color: #192033;
+        margin-bottom: 3px;
+        padding-left: 17px;
+    }
+
+    .login-form__control{
+        padding: 12px 16px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+        border-radius: 12px;
+        background: #F2F3F7;
+        outline: none;
+        border: 1px solid #F2F3F7;
+        display: block;
+        width: 100%;
+        margin-bottom: 12px;
+    }
+
+    .login-form__control:focus {
+        border: 1px solid #224dfb;
+    }
+
+    .login-form__recovery{
+        font-family: Quicksand;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 15px;
+        text-align: end;
+        color: #1F5BDF;
+        margin-bottom: 40px;
+    }
+
+    .login-form__buttons{
+        display: flex;
+        justify-content: center;
+    }
+
+    .login-form__submit{
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 17.5px;
+        text-align: center;        
+        background: #1F5BDF;
+        color: #FFFFFF;
+        min-width: 160px;
+        min-height: 42px;
+        padding: 12px 24px;
+        border-radius: 50px;
+        transition: background-color 0.3s ease;
+    }
+
+    .login-form__submit:hover,
+    .login-form__submit:focus {
+        background: #1748b3;
+    }
+}
+
